@@ -289,11 +289,13 @@ def create_client(model):
             api_key=os.environ["DEEPSEEK_API_KEY"],
             base_url="https://api.deepseek.com"
         ), model
-    elif model == "llama3.1-405b":
+#    elif model == "llama3.1-405b":
+    elif model == "llama-3.2-3b-preview":
         print(f"Using OpenAI API with {model}.")
         return openai.OpenAI(
             api_key=os.environ["OPENROUTER_API_KEY"],
             base_url="https://openrouter.ai/api/v1"
-        ), "meta-llama/llama-3.1-405b-instruct"
+#        ), "meta-llama/llama-3.1-405b-instruct"
+        ), "meta-llama/Llama-3.2-3B"
     else:
         raise ValueError(f"Model {model} not supported.")
