@@ -14,7 +14,8 @@ AVAILABLE_LLMS = [
     "gpt-4o-2024-05-13",
     "gpt-4o-2024-08-06",
     "deepseek-coder-v2-0724",
-    "llama3.1-405b",
+    "llama3.1-405b", # Not available on Groq
+    "llama-3.2-3b-preview",
     # Anthropic Claude models via Amazon Bedrock
     "bedrock/anthropic.claude-3-sonnet-20240229-v1:0",
     "bedrock/anthropic.claude-3-5-sonnet-20240620-v1:0",
@@ -82,10 +83,12 @@ def get_batch_responses_from_llm(
         new_msg_history = [
             new_msg_history + [{"role": "assistant", "content": c}] for c in content
         ]
-    elif model == "llama-3-1-405b-instruct":
+    # elif model == "llama-3-1-405b-instruct":
+    elif model == "llama-3.2-3b-preview":
         new_msg_history = msg_history + [{"role": "user", "content": msg}]
         response = client.chat.completions.create(
-            model="meta-llama/llama-3.1-405b-instruct",
+#            model="meta-llama/llama-3.1-405b-instruct",
+            model="meta-llama/llama-3.2-3b-preview",            
             messages=[
                 {"role": "system", "content": system_message},
                 *new_msg_history,
