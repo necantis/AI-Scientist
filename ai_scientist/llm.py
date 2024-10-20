@@ -88,7 +88,7 @@ def get_batch_responses_from_llm(
         new_msg_history = msg_history + [{"role": "user", "content": msg}]
         response = client.chat.completions.create(
 #            model="meta-llama/llama-3.1-405b-instruct",
-            model="meta-llama/llama-3.2-3b-preview",            
+            model="meta-llama/Llama-3.2-3B",            
             messages=[
                 {"role": "system", "content": system_message},
                 *new_msg_history,
