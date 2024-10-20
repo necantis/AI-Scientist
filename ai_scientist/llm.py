@@ -213,7 +213,7 @@ def get_response_from_llm(
     elif model in ["meta-llama/llama-3.2-3b-preview", "llama-3.2-3b-preview"]:
         new_msg_history = msg_history + [{"role": "user", "content": msg}]
         response = client.chat.completions.create(
-            model="meta-llama/llama-3.2-3b-preview",
+            model="llama-3.2-3b-preview",
             messages=[
                 {"role": "system", "content": system_message},
                 *new_msg_history,
