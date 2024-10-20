@@ -11,7 +11,7 @@ from ai_scientist.llm import (
 )
 
 reviewer_system_prompt_base = (
-    "You are an AI researcher who is reviewing a paper that was submitted to a prestigious venue in management science."
+    "You are a design science researcher who is reviewing a paper that was submitted to a prestigious venue in management science."
     "Be critical and cautious in your decision."
 )
 
@@ -54,7 +54,7 @@ In <JSON>, provide the review in JSON format with the following fields in the or
 - "Soundness": A rating from 1 to 4 (poor, fair, good, excellent).
 - "Presentation": A rating from 1 to 4 (poor, fair, good, excellent).
 - "Contribution": A rating from 1 to 4 (poor, fair, good, excellent).
-- "Overall": A rating from 1 to 10 (very strong reject to award quality). Please mention the textual description associated with the score
+- "Overall": A rating from 1 to 10 (very strong reject to award quality).
 - "Confidence": A rating from 1 to 5 (low, medium, high, very high, absolute).
 - "Decision": A decision that has to be one of the following: Accept, Reject.
 
@@ -71,7 +71,7 @@ When writing your review, please keep in mind that after decisions have been mad
 1. Summary: Briefly summarize the paper and its contributions. This is not the place to critique the paper; the authors should generally agree with a well-written summary.
   - Strengths and Weaknesses: Please provide a thorough assessment of the strengths and weaknesses of the paper, touching on each of the following dimensions:
   - Originality: Are the tasks or methods new? Is the work a novel combination of well-known techniques? (This can be valuable!) Is it clear how this work differs from previous contributions? Is related work adequately cited
-  - Quality: Is the submission technically sound? Are claims well supported (e.g., by theoretical analysis or experimental results)? Are the methods used appropriate? Is this a complete piece of work or work in progress? Are the authors careful and honest about evaluating both the strengths and weaknesses of their work
+  - Quality: Is the submission technically and theoretically sound? Are claims well supported (e.g., by theoretical analysis or experimental results)? Are the methods used appropriate? Is this a complete piece of work or work in progress? Are the authors careful and honest about evaluating both the strengths and weaknesses of their work
   - Clarity: Is the submission clearly written? Is it well organized? (If not, please make constructive suggestions for improving its clarity.) Does it adequately inform the reader? (Note that a superbly written paper provides enough information for an expert reader to reproduce its results.)
   - Significance: Are the results important? Are others (researchers or practitioners) likely to use the ideas or build on them? Does the submission address a difficult task in a better way than previous work? Does it advance the state of the art in a demonstrable way? Does it provide unique data, unique conclusions about existing data, or a unique theoretical or experimental approach?
 
@@ -82,7 +82,7 @@ In general, authors should be rewarded rather than punished for being up front a
 
 4. Ethical concerns: If there are ethical issues with this paper, please flag the paper for an ethics review. For guidance on when this is appropriate, please review the NeurIPS ethics guidelines.
 
-5. Soundness: Please assign the paper a numerical rating on the following scale to indicate the soundness of the technical claims, experimental and research methodology and on whether the central claims of the paper are adequately supported with evidence.
+5. Soundness: Please assign the paper a numerical rating on the following scale to indicate the soundness of the technical and theoretical claims, experimental and research methodology and on whether the central claims of the paper are adequately supported with evidence.
   4: excellent
   3: good
   2: fair 
@@ -94,7 +94,7 @@ In general, authors should be rewarded rather than punished for being up front a
   2: fair
   1: poor
 
-7. Contribution: Please assign the paper a numerical rating on the following scale to indicate the quality of the overall contribution this paper makes to the research area being studied. Are the questions being asked important? Does the paper bring a significant originality of ideas and/or execution? Are the results valuable to share with the broader NeurIPS community.
+7. Contribution: Please assign the paper a numerical rating on the following scale to indicate the quality of the overall contribution this paper makes to the research area being studied. Are the questions being asked important? Does the paper bring a significant originality of ideas and/or execution? Are the results valuable to share with the broader Managemnt Science community ?
   4: excellent
   3: good
   2: fair
