@@ -54,7 +54,7 @@ In <JSON>, provide the review in JSON format with the following fields in the or
 - "Soundness": A rating from 1 to 4 (poor, fair, good, excellent).
 - "Presentation": A rating from 1 to 4 (poor, fair, good, excellent).
 - "Contribution": A rating from 1 to 4 (poor, fair, good, excellent).
-- "Overall": A rating from 1 to 10 (very strong reject to award quality).
+- "Overall": A rating from 1 to 10 (very strong reject to award quality). Please mention the textual description associated with the score
 - "Confidence": A rating from 1 to 5 (low, medium, high, very high, absolute).
 - "Decision": A decision that has to be one of the following: Accept, Reject.
 
