@@ -88,7 +88,7 @@ def get_batch_responses_from_llm(
         new_msg_history = msg_history + [{"role": "user", "content": msg}]
         response = client.chat.completions.create(
 #            model="meta-llama/llama-3.1-405b-instruct",
-            model="meta-llama/Llama-3.2-3B",            
+            model="llama-3.2-3b-preview",            
             messages=[
                 {"role": "system", "content": system_message},
                 *new_msg_history,
@@ -209,10 +209,11 @@ def get_response_from_llm(
         )
         content = response.choices[0].message.content
         new_msg_history = new_msg_history + [{"role": "assistant", "content": content}]
-    elif model in ["meta-llama/llama-3.1-405b-instruct", "llama-3-1-405b-instruct"]:
+#    elif model in ["meta-llama/llama-3.1-405b-instruct", "llama-3-1-405b-instruct"]:
+    elif model in ["meta-llama/llama-3.2-3b-preview", "llama-3.2-3b-preview"]:
         new_msg_history = msg_history + [{"role": "user", "content": msg}]
         response = client.chat.completions.create(
-            model="meta-llama/llama-3.1-405b-instruct",
+            model="meta-llama/llama-3.2-3b-preview",
             messages=[
                 {"role": "system", "content": system_message},
                 *new_msg_history,
